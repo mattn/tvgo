@@ -35,9 +35,9 @@ func main() {
 	for _, ai := range arr {
 		elem, ok := ai.(map[string]interface{})
 		if !ok {
-			log.Fatal("input stream should be array of object")
+			log.Fatal("input stream should be array of objects")
 		}
-		for k, _ := range elem {
+		for k := range elem {
 			if !has(keys, k) {
 				keys = append(keys, k)
 			}
