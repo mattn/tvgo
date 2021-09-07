@@ -56,6 +56,8 @@ func main() {
 			if vv, ok := elem[k]; ok {
 				if _, ok := vv.(map[string]interface{}); ok {
 					items[i] = "..."
+				} else if _, ok := vv.([]interface{}); ok {
+					items[i] = "..."
 				} else {
 					items[i] = fmt.Sprint(vv)
 				}
